@@ -9,8 +9,8 @@ bookworm
 latest
 "}
 
-BASENAME=bitnami/minideb
-DOCKER_REGISTRY=${DOCKER_REGISTRY:-"docker.io"}
+BASENAME=bitmoa/minideb
+DOCKER_REGISTRY=${DOCKER_REGISTRY:-"ghcr.io"}
 PLATFORMS=${PLATFORMS:-amd64 arm64}
 DRY_RUN=${DRY_RUN:-}
 read -r -a ARCHS <<<"$PLATFORMS"
@@ -52,7 +52,12 @@ push_manifest() {
         arch_images+=("$image-$arch")
     done
     run_docker manifest create "$image" "${arch_images[@]}"
-    run_docker manifest push "$image"
+    IMAGE_DIGEST=$(run_docker manifest push "$image")
+    
+    if [ "${ENABLE_COSIGN}" == "1" ]; then
+        cosign sign --yes "${image}@${IMAGE_DIGEST}"
+        cosign verify "${image}" ${COSIGN_VERIFY_ARGS}
+    fi
 }
 
 tags=()

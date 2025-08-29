@@ -8,7 +8,7 @@ DISTS="bullseye
 bookworm
 "
 LATEST=bookworm
-BASENAME=bitnami/minideb
+BASENAME=bitmoa/minideb
 
 if [ -n "${DOCKER_PASSWORD:-}" ]; then
     docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"

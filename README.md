@@ -1,14 +1,16 @@
 <p align="center">
-    <img width="400px" height=auto src="https://dyltqmyl993wv.cloudfront.net/bitnami/bitnami-by-vmware.png" />
+  <img width="400px" height="auto" src="./bitmoa.png" />
 </p>
 
+bitmoa comes from two Korean words: “빛” (bit, meaning light) and “모아” (moa, meaning to gather). The name symbolizes the idea of gathering individual lights together to create a brighter, shared future. At its core, bitmoa represents a community-driven spirit, where collaboration and collective growth shine more brightly than any effort alone.
+
 <p align="center">
-    <a href="https://github.com/bitnami/minideb/actions/workflows/cd.yml"><img src="https://github.com/bitnami/minideb/actions/workflows/cd.yml/badge.svg?branch=master" /></a>
-    <a href="https://hub.docker.com/r/bitnami/minideb/"><img src="https://badgen.net/docker/pulls/bitnami/minideb?icon=docker&label=pulls" /></a>
-    <a href="https://hub.docker.com/r/bitnami/minideb/"><img src="https://badgen.net/docker/stars/bitnami/minideb?icon=docker&label=stars" /></a>
-    <a href="https://github.com/bitnami/minideb"><img src="https://badgen.net/github/forks/bitnami/minideb?icon=github&color=grey" /></a>
-    <a href="https://github.com/bitnami/minideb"><img src="https://badgen.net/github/stars/bitnami/minideb?icon=github&color=grey" /></a>
-    <a href="https://twitter.com/bitnami"><img src="https://badgen.net/badge/twitter/@bitnami/1DA1F2?icon&label" /></a>
+    <a href="https://github.com/bitmoa/minideb/actions/workflows/cd.yml"><img src="https://github.com/bitmoa/minideb/actions/workflows/cd.yml/badge.svg?branch=master" /></a>
+    <a href="https://hub.docker.com/r/bitmoa/minideb/"><img src="https://badgen.net/docker/pulls/bitmoa/minideb?icon=docker&label=pulls" /></a>
+    <a href="https://hub.docker.com/r/bitmoa/minideb/"><img src="https://badgen.net/docker/stars/bitmoa/minideb?icon=docker&label=stars" /></a>
+    <a href="https://github.com/bitmoa/minideb"><img src="https://badgen.net/github/forks/bitmoa/minideb?icon=github&color=grey" /></a>
+    <a href="https://github.com/bitmoa/minideb"><img src="https://badgen.net/github/stars/bitmoa/minideb?icon=github&color=grey" /></a>
+    <a href="https://twitter.com/bitmoa"><img src="https://badgen.net/badge/twitter/@bitmoa/1DA1F2?icon&label" /></a>
 </p>
 
 # What is Minideb
@@ -17,19 +19,19 @@ A minimalist Debian-based image built specifically to be used as a base image fo
 # Use Minideb
 You can use the image directly, e.g.
 ```
-$ docker run --rm -it bitnami/minideb:latest
+$ docker run --rm -it ghcr.io/bitmoa/minideb:latest
 ```
 
-There are [tags](https://hub.docker.com/r/bitnami/minideb/tags/) for the different Debian releases.
+There are [tags](https://github.com/bitmoa/minideb/pkgs/container/minideb/) for the different Debian releases.
 ```
-$ docker run --rm -it bitnami/minideb:bookworm
+$ docker run --rm -it ghcr.io/bitmoa/minideb:bookworm
 ```
 
 The images are built daily and have the security release enabled, so will contain any security updates released more than 24 hours ago.
 
 You can also use the images as a base for your own `Dockerfile`:
 ```
-FROM bitnami/minideb:bookworm
+FROM ghcr.io/bitmoa/minideb:bookworm
 ```
 
 # Why use Minideb
@@ -48,7 +50,7 @@ FROM bitnami/minideb:bookworm
     ```
 
 # Adoption of Minideb
-The minideb container image is the base image for many Bitnami-maintained language runtimes including [php](https://github.com/bitnami/containers/tree/main/bitnami/php-fpm), [nodejs](https://github.com/bitnami/containers/tree/main/bitnami/node), [ruby](https://github.com/bitnami/containers/tree/main/bitnami/ruby) and infrastructure components including [mariadb](https://github.com/bitnami/containers/tree/main/bitnami/mariadb), [redis](https://github.com/bitnami/containers/tree/main/bitnami/redis), [nginx](https://github.com/bitnami/containers/tree/main/bitnami/nginx) and [mongodb](https://github.com/bitnami/containers/tree/main/bitnami/mongodb).
+The minideb container image is the base image for many Bitmoa-maintained language runtimes including [php](https://github.com/bitmoa/containers/tree/main/bitmoa/php-fpm), [nodejs](https://github.com/bitmoa/containers/tree/main/bitmoa/node), [ruby](https://github.com/bitmoa/containers/tree/main/bitmoa/ruby) and infrastructure components including [mariadb](https://github.com/bitmoa/containers/tree/main/bitmoa/mariadb), [redis](https://github.com/bitmoa/containers/tree/main/bitmoa/redis), [nginx](https://github.com/bitmoa/containers/tree/main/bitmoa/nginx) and [mongodb](https://github.com/bitmoa/containers/tree/main/bitmoa/mongodb).
 
 # Compatibility
 The image points to the Debian archive, so you are free to install the packages from there that you need. However, because some `Essential` packages have been removed they may not always install or work correctly.
@@ -91,7 +93,7 @@ $ ./qemu_build bookworm arm64
 ```
 
 The image will be then imported locally through the docker CLI with the `$distribution-$architecture` tag
-(example: `bitnami/minideb:bookworm-arm64`)
+(example: `ghcr.io/bitmoa/minideb:bookworm-arm64`)
 
 Current limitations of the `qemu_build` script:
 
@@ -99,7 +101,7 @@ Current limitations of the `qemu_build` script:
 - Support `AMD64` and `ARM64` target architectures only
 
 # Contributing
-We'd love for you to contribute to this image. You can request new features by creating an [issue](https://github.com/bitnami/minideb/issues), or submit a [pull request](https://github.com/bitnami/minideb/pulls) with your contribution.
+We'd love for you to contribute to this image. You can request new features by creating an [issue](https://github.com/bitmoa/minideb/issues), or submit a [pull request](https://github.com/bitmoa/minideb/pulls) with your contribution.
 
 # License
 
